@@ -1,12 +1,12 @@
 if [ -f '~/.zsh-custom-plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh' ]; then source '~/.zsh-custom-plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh'; fi
 #
-export PATH="$PATH:/Users/r/flutter/bin"
+export PATH="$PATH:~/flutter/bin"
 # git config --global alias.change-commits '!'"f() { VAR=\$1; OLD=\$2; NEW=\$3; shift 3; git filter-branch -f --env-filter \"if [[ \\\"\$\`echo \$VAR\`\\\" = '\$OLD' ]]; then export \$VAR='\$NEW'; fi\" \$@; }; f"
 
 
 export EDITOR=nvim
 
-if [ -f '/Users/r/.config/zsh/alias.zsh' ]; then source '/Users/r/.config/zsh/alias.zsh'; fi
+if [ -f '~/.config/zsh/alias.zsh' ]; then source '~/.config/zsh/alias.zsh'; fi
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -22,7 +22,7 @@ export PATH=$(go env GOPATH)/bin:$PATH
 setopt combining_chars
 
 # The next line updates PATH for Yandex Cloud CLI.
-if [ -f '/Users/r/yandex-cloud/path.bash.inc' ]; then source '/Users/r/yandex-cloud/path.bash.inc'; fi
+if [ -f '~/yandex-cloud/path.bash.inc' ]; then source '~/yandex-cloud/path.bash.inc'; fi
 
 # The next line enables shell command completion for yc.
-if [ -f '/Users/r/yandex-cloud/completion.zsh.inc' ]; then source '/Users/r/yandex-cloud/completion.zsh.inc'; fi
+if [ -f '~/yandex-cloud/completion.zsh.inc' ]; then source '~/yandex-cloud/completion.zsh.inc'; fi
