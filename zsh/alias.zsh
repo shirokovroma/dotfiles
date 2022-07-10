@@ -41,10 +41,7 @@ alias gpsup='git push --set-upstream origin $(git_current_branch)'
 alias l='ls -lah'
 alias la='ls -a'
 alias ll='ls -lh'
-alias lsa='ls -lah'
-
 
 alias armbrew=/opt/homebrew/bin/brew
 
-
-alias zshrc='$EDITOR ~/.zshrc'
+alias zshrc='$EDITOR ~/dotfiles/.zshrc'
