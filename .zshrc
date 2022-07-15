@@ -2,7 +2,8 @@
 if [ -f '/opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' ]; then source '/opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'; fi
 # brew install zsh-history-substring-search
 if [ -f '/opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh' ]; then source '/opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh'; fi
-
+export ANDROID_HOME=/Users/$USER/Library/Android/sdk 
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools 
 export PATH="$PATH:~/flutter/bin"
 # git config --global alias.change-commits '!'"f() { VAR=\$1; OLD=\$2; NEW=\$3; shift 3; git filter-branch -f --env-filter \"if [[ \\\"\$\`echo \$VAR\`\\\" = '\$OLD' ]]; then export \$VAR='\$NEW'; fi\" \$@; }; f"
 
@@ -31,6 +32,6 @@ if [ -f '~/yandex-cloud/path.bash.inc' ]; then source '~/yandex-cloud/path.bash.
 if [ -f '~/yandex-cloud/completion.zsh.inc' ]; then source '~/yandex-cloud/completion.zsh.inc'; fi
 # https://github.com/marlonrichert/zsh-autocomplete
 #if [ -f '~/.zsh-custom-plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh' ]; then source 
-source '~/.zsh-custom-plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh'
+source '/Users/r/.zsh-custom-plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh'
 #; fi
 
