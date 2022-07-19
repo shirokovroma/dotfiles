@@ -1,7 +1,5 @@
 # brew install zsh-syntax-highlighting
 if [ -f '/opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' ]; then source '/opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'; fi
-# brew install zsh-history-substring-search
-if [ -f '/opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh' ]; then source '/opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh'; fi
 export ANDROID_HOME=/Users/$USER/Library/Android/sdk 
 export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools 
 export PATH="$PATH:~/flutter/bin"
