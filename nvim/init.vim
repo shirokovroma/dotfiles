@@ -1,3 +1,4 @@
+" let mapleader = "\<Space>"
 let mapleader = ","
 
 filetype on
@@ -16,7 +17,6 @@ set laststatus=2
 set ruler
 " set spelllang=en_us:
 " set autoindent
-set colorcolumn=120
 set mouse=a
 set clipboard=unnamed
 " set noscrollbind
@@ -58,11 +58,13 @@ Plug 'ryanoasis/vim-devicons'  " https://github.com/ryanoasis/vim-devicons + htt
 Plug 'tpope/vim-commentary'    " https://github.com/tpope/vim-commentary
 "Plug 'airblade/vim-gitgutter'  " https://github.com/airblade/vim-gitgutter
 Plug 'mkitt/tabline.vim'       " https://github.com/mkitt/tabline.vim
-
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } } "https://github.com/glacambre/firenvim
 "> Go
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' } " https://github.com/fatih/vim-go
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     " https://github.com/neoclide/coc.nvim
+
 Plug 'SirVer/ultisnips'                             " https://github.com/sirver/UltiSnips
+Plug 'honza/vim-snippets'                           " https://github.com/honza/vim-snippets
 
 "> Theme
 Plug 'NLKNguyen/papercolor-theme' " https://github.com/NLKNguyen/papercolor-theme
@@ -128,7 +130,6 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
@@ -224,6 +225,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " Mappings for CoCList
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
 nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
@@ -238,3 +240,24 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+nnoremap <leader>p "\"_dP"
+augroup GithubTxtFileType
+  autocmd!
+  autocmd BufEnter www.algoexpert.io_*.txt set filetype=go
+augroup END
+
+" Enable snippet support for installed plugins
+"let g:coc_global_extensions=['coc-snippets']
+
+" Set the default snippet directory
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+
+" Trigger snippet expansion with <tab> key
+" let g:UltiSnipsExpandTrigger='<tab>'
+" let g:UltiSnipsJumpForwardTrigger='<c-b>'
+" let g:UltiSnipsJumpBackwardTrigger='<c-z>'
+
+" Integrate UltiSnips with CoC
+" let g:coc_snippet_next = '<c-b>'
+let g:UltiSnipsSnippetDirectories = ['$HOME/.config/nvim/snippets']
+nnoremap <leader>w :w<CR>
