@@ -45,3 +45,4 @@ alias ll='ls -lh'
 alias armbrew=/opt/homebrew/bin/brew
 
 alias zshrc='$EDITOR ~/dotfiles/.zshrc'
+alias claudee='claude --dangerously-skip-permissions'
