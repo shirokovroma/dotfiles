@@ -46,3 +46,7 @@ alias armbrew=/opt/homebrew/bin/brew
 
 alias zshrc='$EDITOR ~/dotfiles/.zshrc'
 alias claudee='claude --dangerously-skip-permissions'
+
+# fb — terminal file browser (prints cwd on quit)
+# expects fb-bin in $PATH or use absolute path
+alias fb='cd "$(fb-bin)"'

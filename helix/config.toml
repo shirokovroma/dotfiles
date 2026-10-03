@@ -1,0 +1,12 @@
+theme = "onedark"
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.soft-wrap]
+enable = false
+
+[keys.normal]
+"C-m" = ":toggle soft-wrap.enable"
